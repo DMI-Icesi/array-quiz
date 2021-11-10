@@ -1,5 +1,5 @@
-import TridimensionalPoint from "./TridimensionalPoint.js";
-import BidimensionalPoint from "./BidimensionalPoint.js";
+import TridimensionalPoint from "./TridimensionalPoint";
+import BidimensionalPoint from "./BidimensionalPoint";
 
 const punto808 = new TridimensionalPoint(8, 0, 8);
 const punto348 = new TridimensionalPoint(3, 4, 8);
@@ -114,15 +114,15 @@ if (indexPunto1012 !== -1) {
 */
 
 // 7
-const largoPuntos = puntosEn3Dimensiones.length;
+const largoPuntos: number = puntosEn3Dimensiones.length;
 // R: 5
 
 // 8
-const posicionXPuntoDos = puntosEn3Dimensiones[2].x;
+const posicionXPuntoDos: number = puntosEn3Dimensiones[2].x;
 // R: 8
 
 // 9
-const indiceYCero = puntosEn3Dimensiones.findIndex((punto: TridimensionalPoint) => {
+const indiceYCero: number = puntosEn3Dimensiones.findIndex((punto: TridimensionalPoint) => {
     return punto.y === 0;
 });
 // R: 2
@@ -136,7 +136,7 @@ const puntosNuevos: TridimensionalPoint[] = [
     new TridimensionalPoint(7, 8, 1),
 ];
 
-const todosLosPuntos = puntosEn3Dimensiones.concat(puntosNuevos);
+const todosLosPuntos: TridimensionalPoint[] = puntosEn3Dimensiones.concat(puntosNuevos);
 /*
 [
   TridimensionalPoint { x: 5, y: 3, z: 10 },
@@ -153,7 +153,7 @@ const todosLosPuntos = puntosEn3Dimensiones.concat(puntosNuevos);
  */
 
 // 11
-const puntosEn2Dimensiones = todosLosPuntos.map((point: TridimensionalPoint) => {
+const puntosEn2Dimensiones: BidimensionalPoint[] = todosLosPuntos.map((point: TridimensionalPoint) => {
     return new BidimensionalPoint(point.x, point.y);
 });
 /*
@@ -172,7 +172,7 @@ const puntosEn2Dimensiones = todosLosPuntos.map((point: TridimensionalPoint) => 
  */
 
 // 12
-const yMayorOIgualA5 = puntosEn2Dimensiones.filter((point: BidimensionalPoint) => {
+const yMayorOIgualA5: BidimensionalPoint[] = puntosEn2Dimensiones.filter((point: BidimensionalPoint) => {
     return point.y >= 5;
 });
 /*
@@ -186,7 +186,7 @@ const yMayorOIgualA5 = puntosEn2Dimensiones.filter((point: BidimensionalPoint) =
  */
 
 // 13
-const menosElPrimeroYElUltimo = yMayorOIgualA5.slice(1, yMayorOIgualA5.length - 1);
+const menosElPrimeroYElUltimo: BidimensionalPoint[] = yMayorOIgualA5.slice(1, yMayorOIgualA5.length - 1);
 /*
 [
   BidimensionalPoint { x: 5, y: 9 },
