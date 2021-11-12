@@ -40,12 +40,11 @@ puntosEn3Dimensiones.unshift(new TridimensionalPoint(5, 3, 0));
 // 2
 puntosEn3Dimensiones.splice(4, 0, new TridimensionalPoint(8, 8, 8));
 /*[
-  TridimensionalPoint { x: 5, y: 3, z: 0 },
   TridimensionalPoint { x: 3, y: 4, z: 8 },
   TridimensionalPoint { x: 5, y: 3, z: 10 },
   TridimensionalPoint { x: 7, y: 0, z: 1 },
-  TridimensionalPoint { x: 8, y: 8, z: 8 }, <------
-  TridimensionalPoint { x: 8, y: 0, z: 0 },
+  TridimensionalPoint { x: 8, y: 8, z: 8 },
+  TridimensionalPoint { x: 8, y: 0, z: 0 }, <------
   TridimensionalPoint { x: 10, y: 1, z: 2 },
   TridimensionalPoint { x: 8, y: 0, z: 8 },
   TridimensionalPoint { x: 9, y: 2, z: 3 },
@@ -57,7 +56,6 @@ puntosEn3Dimensiones.splice(0, 2);
 /*
 [
   ------>
-  TridimensionalPoint { x: 5, y: 3, z: 10 },
   TridimensionalPoint { x: 7, y: 0, z: 1 },
   TridimensionalPoint { x: 8, y: 8, z: 8 },
   TridimensionalPoint { x: 8, y: 0, z: 0 },
@@ -72,7 +70,6 @@ puntosEn3Dimensiones.splice(0, 2);
 puntosEn3Dimensiones.splice(-2, 3);
 /*
 [
-  TridimensionalPoint { x: 5, y: 3, z: 10 },
   TridimensionalPoint { x: 7, y: 0, z: 1 },
   TridimensionalPoint { x: 8, y: 8, z: 8 },
   TridimensionalPoint { x: 8, y: 0, z: 0 },
@@ -88,7 +85,6 @@ puntosEn3Dimensiones.sort((a: TridimensionalPoint, b: TridimensionalPoint): numb
 });
 /*
 [
-  TridimensionalPoint { x: 5, y: 3, z: 10 },
   TridimensionalPoint { x: 8, y: 8, z: 8 },
   TridimensionalPoint { x: 8, y: 0, z: 8 },
   TridimensionalPoint { x: 10, y: 1, z: 2 },
@@ -104,7 +100,6 @@ if (indexPunto1012 !== -1) {
     puntosEn3Dimensiones.splice(indexPunto1012, 1);
 }
 /* [
-  TridimensionalPoint { x: 5, y: 3, z: 10 },
   TridimensionalPoint { x: 8, y: 8, z: 8 },
   TridimensionalPoint { x: 8, y: 0, z: 8 },
   ------>
@@ -139,7 +134,6 @@ const puntosNuevos: TridimensionalPoint[] = [
 const todosLosPuntos: TridimensionalPoint[] = puntosEn3Dimensiones.concat(puntosNuevos);
 /*
 [
-  TridimensionalPoint { x: 5, y: 3, z: 10 },
   TridimensionalPoint { x: 8, y: 8, z: 8 },
   TridimensionalPoint { x: 8, y: 0, z: 8 },
   TridimensionalPoint { x: 7, y: 0, z: 1 },
@@ -158,7 +152,6 @@ const puntosEn2Dimensiones: BidimensionalPoint[] = todosLosPuntos.map((point: Tr
 });
 /*
 [
-  BidimensionalPoint { x: 5, y: 3 },
   BidimensionalPoint { x: 8, y: 8 },
   BidimensionalPoint { x: 8, y: 0 },
   BidimensionalPoint { x: 7, y: 0 },
